@@ -195,7 +195,7 @@ export default function HomeView() {
             </div>
 
             <div className="text-right border-t border-slate-100 pt-2">
-              <p className="text-xs font-bold text-[#800000] font-serif">Prof. H. S. Sharma</p>
+              <p className="text-xs font-bold text-[#800000] font-serif">Mr. Santosh Kumar Srivastava</p>
               <p className="text-[10px] text-slate-500 uppercase">Director Academic Affairs, HSP</p>
             </div>
           </div>
