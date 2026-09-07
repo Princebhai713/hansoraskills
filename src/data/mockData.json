@@ -1,0 +1,339 @@
+{
+  "centers": [
+    {
+      "id": "c1",
+      "center_code": "HS-UP-101",
+      "center_name": "Gorakhpur Skill Tech Institute",
+      "director_name": "Santosh Yadav",
+      "phone": "+91 98765 43210",
+      "email": "gorakhpur.center@hansoraskills.com",
+      "plain_password": "gorakhpur@admin2026",
+      "state": "Uttar Pradesh",
+      "district": "Gorakhpur",
+      "pincode": "273015",
+      "full_address": "Near Hadhwa Phatak, Opp. Vivo Service Center, Gorakhpur, UP",
+      "wallet_balance": 5200,
+      "status": "Active",
+      "created_at": "2026-01-15T10:30:00Z"
+    },
+    {
+      "id": "c2",
+      "center_code": "HS-UP-102",
+      "center_name": "Kushinagar Vocational & Computer Academy",
+      "director_name": "M. P. Sharma",
+      "phone": "+91 98111 22334",
+      "email": "kushinagar.center@hansoraskills.com",
+      "plain_password": "kushinagar#pass99",
+      "state": "Uttar Pradesh",
+      "district": "Kushinagar",
+      "pincode": "274403",
+      "full_address": "Tamkuhi Road, Near Railway Station, Kushinagar, UP",
+      "wallet_balance": 1800,
+      "status": "Active",
+      "created_at": "2026-02-01T09:00:00Z"
+    },
+    {
+      "id": "c3",
+      "center_code": "HS-BR-201",
+      "center_name": "Patna Youth Skills & Health Institute",
+      "director_name": "Rajesh Ranjan",
+      "phone": "+91 97222 33445",
+      "email": "patna.tech@hansoraskills.com",
+      "plain_password": "patna@secret123",
+      "state": "Bihar",
+      "district": "Patna",
+      "pincode": "800001",
+      "full_address": "Boring Road, Near Pantaloons, Patna, Bihar",
+      "wallet_balance": 4400,
+      "status": "Active",
+      "created_at": "2026-02-20T11:15:00Z"
+    }
+  ],
+  "courses": [
+    {
+      "id": "crs_1",
+      "code": "DCA",
+      "name": "Diploma in Computer Applications",
+      "category": "Computer Education",
+      "duration": "6 Months",
+      "tier": "1-Year",
+      "enrollment_fee": 200,
+      "curriculum": [
+        { "subject_name": "Computer Fundamentals & OS", "max_theory": 70, "max_practical": 30, "pass_percentage": 40 },
+        { "subject_name": "MS Office Suite & Internet", "max_theory": 70, "max_practical": 30, "pass_percentage": 40 }
+      ]
+    },
+    {
+      "id": "crs_2",
+      "code": "ADCA",
+      "name": "Advance Diploma in Computer Applications",
+      "category": "Computer Education",
+      "duration": "1 Year",
+      "tier": "1-Year",
+      "enrollment_fee": 250,
+      "curriculum": [
+        { "subject_name": "IT Tools & Business Systems", "max_theory": 70, "max_practical": 30, "pass_percentage": 40 },
+        { "subject_name": "Financial Accounting (Tally Prime)", "max_theory": 70, "max_practical": 30, "pass_percentage": 40 },
+        { "subject_name": "Graphic Design & Web Technology", "max_theory": 70, "max_practical": 30, "pass_percentage": 40 }
+      ]
+    },
+    {
+      "id": "crs_3",
+      "code": "CHM",
+      "name": "Certificate in Health Science & First Aid",
+      "category": "Health Science",
+      "duration": "1 Year",
+      "tier": "1-Year",
+      "enrollment_fee": 500,
+      "curriculum": [
+        { "subject_name": "Basic Anatomy & Physiology", "max_theory": 60, "max_practical": 40, "pass_percentage": 45 },
+        { "subject_name": "First Aid Emergency Protocol", "max_theory": 60, "max_practical": 40, "pass_percentage": 45 },
+        { "subject_name": "Community Health Nursing Care", "max_theory": 60, "max_practical": 40, "pass_percentage": 45 }
+      ]
+    },
+    {
+      "id": "crs_4",
+      "code": "DSE",
+      "name": "Diploma in Software Engineering",
+      "category": "Computer Education",
+      "duration": "2 Years",
+      "tier": "2-Year",
+      "enrollment_fee": 400,
+      "curriculum": [
+        { "subject_name": "Programming in C & Data Structures (Year 1)", "max_theory": 75, "max_practical": 25, "pass_percentage": 40 },
+        { "subject_name": "DBMS & Web Technologies (Year 1)", "max_theory": 75, "max_practical": 25, "pass_percentage": 40 },
+        { "subject_name": "Java & Full-Stack Development (Year 2)", "max_theory": 75, "max_practical": 25, "pass_percentage": 40 },
+        { "subject_name": "Software Engineering & Capstone Project (Year 2)", "max_theory": 60, "max_practical": 40, "pass_percentage": 40 }
+      ]
+    },
+    {
+      "id": "crs_5",
+      "code": "FVT",
+      "name": "Fashion & Vocational Garment Technology",
+      "category": "Vocational Education",
+      "duration": "1 Year",
+      "tier": "1-Year",
+      "enrollment_fee": 200,
+      "curriculum": [
+        { "subject_name": "Textile Science & Pattern Making", "max_theory": 50, "max_practical": 50, "pass_percentage": 40 },
+        { "subject_name": "Garment Construction & Tailoring", "max_theory": 50, "max_practical": 50, "pass_percentage": 40 }
+      ]
+    }
+  ],
+  "students": [
+    {
+      "id": "std_101",
+      "roll_no": "26101001",
+      "reg_no": "HS/2026/0142",
+      "center_code": "HS-UP-101",
+      "course_code": "ADCA",
+      "name": "Amit Kumar",
+      "father_name": "Ramakant Kumar",
+      "mother_name": "Kusum Devi",
+      "dob": "2004-08-15",
+      "gender": "Male",
+      "photo_url": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80",
+      "status": "Certified",
+      "admission_date": "2025-03-10",
+      "id_card_issued": true,
+      "admit_card_issued": true,
+      "marks": {
+        "scores": [
+          { "subject_name": "IT Tools & Business Systems", "theory_obtained": 62, "practical_obtained": 28 },
+          { "subject_name": "Financial Accounting (Tally Prime)", "theory_obtained": 65, "practical_obtained": 29 },
+          { "subject_name": "Graphic Design & Web Technology", "theory_obtained": 64, "practical_obtained": 27 }
+        ],
+        "total_max": 300,
+        "total_obtained": 275,
+        "percentage": 91.67,
+        "grade": "A+",
+        "is_approved": true,
+        "approved_by": "Director Examination (Hansora Skills)",
+        "approved_at": "2026-02-28"
+      }
+    },
+    {
+      "id": "std_102",
+      "roll_no": "26101002",
+      "reg_no": "HS/2026/0143",
+      "center_code": "HS-UP-101",
+      "course_code": "DCA",
+      "name": "Pooja Singh",
+      "father_name": "Virendra Singh",
+      "mother_name": "Sunita Singh",
+      "dob": "2005-02-20",
+      "gender": "Female",
+      "photo_url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      "status": "Pending Verification",
+      "admission_date": "2025-08-12",
+      "id_card_issued": true,
+      "admit_card_issued": true,
+      "marks": {
+        "scores": [
+          { "subject_name": "Computer Fundamentals & OS", "theory_obtained": 58, "practical_obtained": 26 },
+          { "subject_name": "MS Office Suite & Internet", "theory_obtained": 61, "practical_obtained": 27 }
+        ],
+        "total_max": 200,
+        "total_obtained": 172,
+        "percentage": 86.0,
+        "grade": "A+",
+        "is_approved": false,
+        "approved_by": null,
+        "approved_at": null
+      }
+    },
+    {
+      "id": "std_103",
+      "roll_no": "26101003",
+      "reg_no": "HS/2026/0144",
+      "center_code": "HS-UP-101",
+      "course_code": "CHM",
+      "name": "Vikas Verma",
+      "father_name": "Dinesh Verma",
+      "mother_name": "Meera Verma",
+      "dob": "2003-11-05",
+      "gender": "Male",
+      "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "status": "Accepted",
+      "admission_date": "2026-01-20",
+      "id_card_issued": true,
+      "admit_card_issued": false,
+      "marks": null
+    },
+    {
+      "id": "std_104",
+      "roll_no": "26101004",
+      "reg_no": "HS/2026/0145",
+      "center_code": "HS-UP-101",
+      "course_code": "DCA",
+      "name": "Neha Prajapati",
+      "father_name": "Suresh Prajapati",
+      "mother_name": "Geeta Devi",
+      "dob": "2006-04-18",
+      "gender": "Female",
+      "photo_url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80",
+      "status": "Applied",
+      "admission_date": "2026-03-01",
+      "id_card_issued": false,
+      "admit_card_issued": false,
+      "marks": null
+    },
+    {
+      "id": "std_201",
+      "roll_no": "26102001",
+      "reg_no": "HS/2026/0201",
+      "center_code": "HS-UP-102",
+      "course_code": "DSE",
+      "name": "Rahul Kushwaha",
+      "father_name": "Brijesh Kushwaha",
+      "mother_name": "Sharda Devi",
+      "dob": "2002-12-30",
+      "gender": "Male",
+      "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "status": "Certified",
+      "admission_date": "2024-04-15",
+      "id_card_issued": true,
+      "admit_card_issued": true,
+      "marks": {
+        "scores": [
+          { "subject_name": "Programming in C & Data Structures (Year 1)", "theory_obtained": 65, "practical_obtained": 22 },
+          { "subject_name": "DBMS & Web Technologies (Year 1)", "theory_obtained": 68, "practical_obtained": 23 },
+          { "subject_name": "Java & Full-Stack Development (Year 2)", "theory_obtained": 70, "practical_obtained": 24 },
+          { "subject_name": "Software Engineering & Capstone Project (Year 2)", "theory_obtained": 54, "practical_obtained": 38 }
+        ],
+        "total_max": 400,
+        "total_obtained": 364,
+        "percentage": 91.0,
+        "grade": "A+",
+        "is_approved": true,
+        "approved_by": "Controller of Exams (Hansora Skills)",
+        "approved_at": "2026-02-15"
+      }
+    }
+  ],
+  "wallet_transactions": [
+    {
+      "id": "tx_01",
+      "center_code": "HS-UP-101",
+      "type": "CREDIT",
+      "amount": 5000,
+      "description": "Initial Wallet Top-Up via Bank UPI QR",
+      "utr_number": "UTR2026021588912",
+      "reference_student_roll": null,
+      "balance_after": 5000,
+      "timestamp": "2026-02-15T10:00:00Z"
+    },
+    {
+      "id": "tx_02",
+      "center_code": "HS-UP-101",
+      "type": "DEBIT",
+      "amount": 250,
+      "description": "Enrollment Fee Deduction (ADCA) for Roll: 26101001",
+      "utr_number": null,
+      "reference_student_roll": "26101001",
+      "balance_after": 4750,
+      "timestamp": "2026-02-16T14:20:00Z"
+    },
+    {
+      "id": "tx_03",
+      "center_code": "HS-UP-101",
+      "type": "CREDIT",
+      "amount": 1000,
+      "description": "Recharge Approved by Super Admin (Cash Deposit)",
+      "utr_number": "CASH-REC-101",
+      "reference_student_roll": null,
+      "balance_after": 5750,
+      "timestamp": "2026-02-18T16:00:00Z"
+    },
+    {
+      "id": "tx_04",
+      "center_code": "HS-UP-101",
+      "type": "DEBIT",
+      "amount": 500,
+      "description": "Enrollment Fee Deduction (CHM) for Roll: 26101003",
+      "utr_number": null,
+      "reference_student_roll": "26101003",
+      "balance_after": 5250,
+      "timestamp": "2026-02-20T11:45:00Z"
+    },
+    {
+      "id": "tx_05",
+      "center_code": "HS-UP-101",
+      "type": "DEBIT",
+      "amount": 200,
+      "description": "Enrollment Fee Deduction (DCA) for Roll: 26101002",
+      "utr_number": null,
+      "reference_student_roll": "26101002",
+      "balance_after": 5050,
+      "timestamp": "2026-02-25T09:30:00Z"
+    }
+  ],
+  "franchise_leads": [
+    {
+      "id": "lead_1",
+      "applicant_name": "Arun Kumar Mishra",
+      "institution_name": "Mishra Computer Training Academy",
+      "phone": "+91 94500 11223",
+      "email": "mishra.academy@gmail.com",
+      "state": "Uttar Pradesh",
+      "district": "Deoria",
+      "pincode": "274001",
+      "computer_count": 15,
+      "status": "New Lead",
+      "created_at": "2026-03-02T15:30:00Z"
+    },
+    {
+      "id": "lead_2",
+      "applicant_name": "Dr. Ramesh Chaurasia",
+      "institution_name": "Seva Health & Skill Mission",
+      "phone": "+91 98390 44556",
+      "email": "dr.ramesh.seva@outlook.com",
+      "state": "Bihar",
+      "district": "Gopalganj",
+      "pincode": "841428",
+      "computer_count": 8,
+      "status": "In Review",
+      "created_at": "2026-03-04T12:00:00Z"
+    }
+  ]
+}

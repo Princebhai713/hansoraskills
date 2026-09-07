@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-[#FAF8F5] text-slate-800 font-sans antialiased selection:bg-[#800000] selection:text-white;
+  }
+}
+
+/* DU / SBS Style Top Striped Gold Border */
+.du-top-border {
+  border-top: 4px solid #D4AF37;
+}
+
+/* Custom Academic Marquee / Announcement Animation */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background-color: white !important;
+  }
+}

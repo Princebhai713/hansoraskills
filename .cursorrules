@@ -1,0 +1,74 @@
+# CURSOR & AI VIBE-CODING RULES: HANSORA SKILLS PORTAL
+
+You are an expert full-stack React and UI/UX engineer specializing in high-density enterprise SaaS applications. You are building the **Hansora Skills Portal** prototype.
+
+---
+
+## 1. SOURCE OF TRUTH & GUIDELINES
+- Strict Adherence: All components, state mutations, and business rules must strictly reflect `docs/PRD.md`, `docs/DATABASE_SCHEMA.md`, `docs/USER_FLOW_AND_IA.md`, and `src/data/mockData.json`.
+- Do not invent extra roles (stick to Super Admin, Sub-Admin, Center, and Student/Public).
+- Do not remove the core auto-debit wallet mechanism or the two-step verification workflow.
+
+---
+
+## 2. TECH STACK SPECIFICATIONS
+- Runtime/Framework: React 18+ via Vite.
+- Styling: Tailwind CSS (Utility-First). No inline styles except for dynamic print dimensions.
+- Icons: `lucide-react` exclusively.
+- State Architecture: Reactive in-memory state with `localStorage` persistence (via React Context or Zustand) to enable full interactive click-through testing on Vercel without a real backend.
+- Printing Engine: Tailwind `@media print` directives and pure CSS for A4 Marksheets and Certificates.
+
+---
+
+## 3. ABSOLUTE BUSINESS RULES TO ENFORCE IN CODE
+
+### 3.1. Wallet & Admission Flow
+- Initial State: Center `HS-UP-101` starts with balance ₹5,200.
+- When adding a student, default status is `Applied`. No wallet deduction occurs.
+- When center clicks `Accept`, check if `wallet_balance >= course.enrollment_fee`:
+  - If TRUE: Deduct fee (e.g., ₹200 for DCA, ₹250 for ADCA), create a `DEBIT` transaction in the ledger, change status to `Accepted`, and generate sequential roll number.
+  - If FALSE: Block action and trigger the dynamic `RechargeModal` showing the corporate QR code.
+- If center clicks `Reject`, set status to `Rejected` with zero wallet deduction.
+
+### 3.2. Marks Entry & Two-Tier Approval
+- 1-Year Courses: Input Theory + Practical. Auto-calculate total and percentage.
+- 2-Year Courses: Show semester tabs (Semester 1 & Semester 2).
+- Submitting marks sets status to `Pending Verification`.
+- Lock Rule: The `Download Marksheet` and `Download Certificate` buttons MUST REMAIN DISABLED or show a prominent diagonal `PROVISIONAL / PREVIEW - NOT VALID` watermark until Super Admin clicks `Approve Result`.
+- Super Admin Override: Admin must have inline editable input fields to adjust suspicious theory or practical marks before clicking `Approve & Issue Certificate`.
+
+### 3.3. Franchise Plaintext Password Visibility
+- In `SuperAdminView.jsx`, the Center Credentials table must render the franchise password as readable plaintext (not masked or obscured) so the admin can review it directly.
+
+---
+
+## 4. UI/UX & STYLING DIRECTIVES (2026 SaaS STANDARD)
+- Background: `bg-slate-50 text-slate-900`.
+- Cards: `bg-white rounded-xl border border-slate-200/80 shadow-sm`.
+- Primary CTA: `bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg px-4 py-2 text-sm transition-colors`.
+- Data Tables: High-density rows (`py-3.5 px-4`), clear column headers (`bg-slate-50 text-slate-500 font-semibold text-xs uppercase tracking-wider`).
+- Status Badges:
+  - Applied: `bg-slate-100 text-slate-700 border border-slate-200`
+  - Accepted: `bg-blue-50 text-blue-700 border border-blue-200`
+  - Pending Verification: `bg-amber-50 text-amber-700 border border-amber-200`
+  - Certified: `bg-emerald-50 text-emerald-700 border border-emerald-200`
+  - Rejected: `bg-rose-50 text-rose-700 border border-rose-200`
+
+---
+
+## 5. PRINT & CERTIFICATE DIRECTIVES
+- In `MarksheetPrint.jsx` (A4 Portrait):
+  - Strip navbar, sidebar, buttons, and footers via `@media print`.
+  - Include corporate header: "Hansora Skills Private Limited", student photo, roll number, subject matrix, total marks, percentage, division, QR code, and signatures.
+- In `CertificatePrint.jsx` (A4 Landscape):
+  - Double security border (Guilloche styling with Gold/Navy accents).
+  - Center corporate seal watermark (`opacity-5`).
+  - Bottom Left: Dynamic QR code resolving to `https://hansoraskills.com/verify?roll=[ROLL_NO]`.
+  - Bottom Right: Authorized Signatory and Controller of Examinations.
+
+---
+
+## 6. PROTOTYPE INTERACTIVITY REQUIREMENT
+When generating the app:
+- Provide an overarching **Role Switcher Toolbar** at the top: `[Switch View: Public Site | Study Center Dashboard | Super Admin Console]`.
+- All operations (adding student, deducting wallet, updating marks, approving marks, searching verified results) must update the shared reactive state immediately without page reloads.
